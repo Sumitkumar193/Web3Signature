@@ -12,6 +12,15 @@
             "Desnake\\Web3signature\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Desnake\\Web3signature\\Web3SignatureServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
     "authors": [
         {
             "name": "Sumit Kumar",
