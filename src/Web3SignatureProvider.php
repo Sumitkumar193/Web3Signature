@@ -1,6 +1,6 @@
 <?php
 
-namespace Desnake\Web3signature\Provider;
+namespace Desnake\Web3signature;
 
 use Illuminate\Support\ServiceProvider;
 
