@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MetaMask Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+            </div>
+            <button class="btn btn-primary mt-5" type="submit" onclick="web3Login();">
+                Log in with MetaMask
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    async function web3Login() {
+
+        //Check if metamask is installed
+        if (!window.ethereum) {
+            alert('MetaMask not found.');
+            window.location.reload();
+        }
+
+        web3 = new Web3("http://127.0.0.1:7545"); //Set provider to ganache
+
+        //Load account from metamask
+        const accounts = await window.ethereum.request({
+            method: 'eth_requestAccounts'
+        });
+        console.log(accounts[0]);
+
+        //prepare message to sign
+        const msgtext = "Hello asd World";
+        const hashedMessage = Web3.utils.fromUtf8(msgtext);
+        console.log(hashedMessage);
+
+        //get user to sign the message
+        const signature = await window.web3.eth.sign(hashedMessage, accounts[0]);
+
+        //Make request to controller and verify signature in backend
+        console.log(signature);
+
+    }
+</script>

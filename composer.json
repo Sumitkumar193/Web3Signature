@@ -1,0 +1,19 @@
+{
+    "name": "desnake/web3signature",
+    "description": "Laravel package for extracting addresses from signed ms received from web3 client.",
+    "require": {
+        "kornrunner/keccak": "^1.1"
+    },
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Desnake\\Web3signature\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sumit Kumar",
+            "email": "itsme.sumit96@gmail.com"
+        }
+    ]
+}

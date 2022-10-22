@@ -1,0 +1,40 @@
+<?php
+
+// namespace App\Http\Controllers\api\v1;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\DeSnake\Web3ForContracts;
+
+class Web3Controller extends Controller
+{
+    use Web3ForContracts;
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        echo "Click to Submit to login";
+        return view('web3.login');
+    }
+
+    public function checkSign($address , $signature)
+    {
+        //Message to be checked against signature
+        $msg = "Hello World";
+
+        /**
+        *  @param $valid string address 
+        **/
+        $valid = $this->personal_ecRecover($msg, $signature);
+
+        if ($valid == $address) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
