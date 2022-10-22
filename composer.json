@@ -3,7 +3,7 @@
     "description": "Laravel package for extracting addresses from signed messages received from web3 client.",
     "require": {
         "kornrunner/keccak": "^1.1",
-        "laravel/framework": "10.x-dev"
+        "laravel/framework": "^9.19"
     },
     "license": "LGPL-3.0-or-later",
     "minimum-stability": "dev",
