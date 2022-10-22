@@ -5,6 +5,7 @@ Laravel Package for extracting addresses from web3 signed messages
 # Usage
 
 Composer:
+
     composer require desnake/web3signature
 
 In view:
