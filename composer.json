@@ -1,10 +1,12 @@
 {
     "name": "desnake/web3signature",
-    "description": "Laravel package for extracting addresses from signed ms received from web3 client.",
+    "description": "Laravel package for extracting addresses from signed messages received from web3 client.",
     "require": {
-        "kornrunner/keccak": "^1.1"
+        "kornrunner/keccak": "^1.1",
+        "laravel/framework": "10.x-dev"
     },
     "license": "LGPL-3.0-or-later",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Desnake\\Web3signature\\": "src/"
