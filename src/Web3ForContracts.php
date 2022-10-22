@@ -3,9 +3,9 @@
 namespace Desnake\Web3signature;
 
 use kornrunner\Keccak;
-use DeSnake\Web3signature\Signature;
+use Desnake\Web3signature\Signature;
 
-Trait Web3ForContracts
+trait Web3ForContracts
 {
     // Build your next great package.
     public function personal_ecRecover($msg, $signed)
