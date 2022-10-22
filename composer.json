@@ -26,5 +26,13 @@
             "name": "Sumit Kumar",
             "email": "itsme.sumit96@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "require-dev": {
+        "orchestra/testbench": "*"
+    }
 }
